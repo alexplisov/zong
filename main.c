@@ -61,6 +61,10 @@ void move_ball_to_center(struct game *g) {
 	g->ball.position.y = g->window_height / 2 - g->ball.rect.h / 2;
 	g->ball.speed.x = -g->ball.speed.x;
 	g->ball.speed.y = -g->ball.speed.y;
+	g->ball.speed.x = g->ball.speed.x > 20 ? 20 : g->ball.speed.x;
+	g->ball.speed.x = g->ball.speed.x < -20 ? -20 : g->ball.speed.x;
+	g->ball.speed.y = g->ball.speed.y > 20 ? 20 : g->ball.speed.y;
+	g->ball.speed.y = g->ball.speed.y < -20 ? -20 : g->ball.speed.y;
 }
 
 int check_collision(const struct v2 *p1, const struct v2 *p2,
