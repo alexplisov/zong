@@ -1,0 +1,9 @@
+CompileFlags:
+  Add: [
+    -std=c99,
+    -I/opt/homebrew/include,
+    -L/opt/homebrew/lib,
+    -L/opt/homebrew/lib,
+    -l SDL2
+  ]
+  Compiler: clang

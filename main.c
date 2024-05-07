@@ -306,7 +306,7 @@ void die(struct game *g) {
 	SDL_Quit();
 }
 
-int main() {
+int main(void) {
 	struct game game;
 	init(&game);
 	do {
